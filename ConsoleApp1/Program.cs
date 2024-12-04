@@ -1,37 +1,9 @@
-﻿Console.WriteLine("Witaj w programie liczącym BMI");
-double weight;
-double height;
+﻿using ConsoleApp1;
 
-Console.WriteLine("Podaj swoją wagę w kg");
-weight = double.Parse(Console.ReadLine());
-Console.WriteLine("Podaj swój wzrost w m");
+Person bill = new Person(new DateTime(1999, 11, 11), "Bill", "Wick");
+bill.SayHi();
+bill.ContactNumber = "111222333";
 
+Person john = new Person(new DateTime(2000, 1, 1), "John", "Wick");
 
-height = double.Parse(Console.ReadLine());
-double bmi = weight / (height * height);
-Console.WriteLine($"Twoja waga to {weight} a wzrost to {height}");
-
-switch (bmi)
-{
-    case < 18.5:
-        Console.WriteLine($"Twój BMI wynosi {bmi} masz niedowagę");
-        break;
-
-        case >=18.5 and <=24.9:
-            Console.WriteLine($"Twój BMI wynosi {bmi} twoja waga jest w normie");
-        break;
-
-    case >= 25 and <= 29.9:
-        Console.WriteLine($"Twój BMI wynosi {bmi} masz nadwagę");
-        break;
-
-    case >= 30 and <= 34.9:
-        Console.WriteLine($"Twój BMI wynosi {bmi} masz otyłość");
-        break;
-    case > 35:
-        Console.WriteLine($"Twój BMI wynosi {bmi} masz otyłość olbrzymią");
-        break;
-}
-
-Console.WriteLine($"Dziękuję, papa");
-
+Console.WriteLine($"Number of persons: {Person.Count}");
