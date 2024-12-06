@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class File
+    interface IFile
     {
+        string FileName { get; set; }
+        int Size { get; set; }
+        DateTime CreatedOn { get; set; }
+        void Compress();
     }
 }
